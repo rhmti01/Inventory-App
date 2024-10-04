@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en" dir="rtl" >
+<html lang="en" dir="ltr">
 
 <head>
     <meta charset="UTF-8">
@@ -9,15 +8,184 @@
     <link rel="apple-touch-icon" sizes="180x180" href="https://tailwindcss.com/favicons/favicon-16x16.png?v=3" />
     <link rel="icon" type="image/png" sizes="32x32" href="https://tailwindcss.com/favicons/favicon-16x16.png?v=3" />
     <link rel="icon" type="image/png" sizes="16x16" href="https://tailwindcss.com/favicons/favicon-16x16.png?v=3" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
     <title> Inventory App | Abolfazl Rahmati </title>
-    <link rel="stylesheet"  href="/public/build/style.css">
+    <link rel="stylesheet" href="/public/build/style.css">
 </head>
 
 
-<body class="  ">
-
-    <script src="//unpkg.com/alpinejs" defer></script>
-    <script src="/src/js/app.js" type="module" ></script>
+<body class="font-outfit bg-main  flex items-center justify-center flex-col  ">
+    <!-- web title  -->
+    <div class="  mt-14 flex items-center justify-center ">
+        <h1 class=" text-green-600 zz:text-4xl  ww:text-3xl xx:text-2xl dd:text-[22px] mx-4 leading-5 ss:text-xl text-wrap text-center w-full font-bold  ">Inventory App With JS & TailwindCSS </h1>
+    </div>
+    <!-- Add Category Section -->
+    <section class=" bg-white/ h-auto mt-16 flex  justify-center flex-col zz:py-4 ww:py-3 zz:max-w-[600px] xx:max-w-[92%] ss:max-w-[90%] w-full ">
+        <!-- <a class=" font-medium text-stone-400 text-[18px] text-left ml-1 cursor-pointer " >?Add New Product</a> -->
+        <a class=" font-medium text-stone-200 zz:text-[21px] ww:text-[19px] xx:text-[17px] dd:text-[15px] ss:text-[14px] text-left ml-3 cursor-pointer ">Add New Category</a>
+        <div class="bg-[#1a262d] h-auto flex items-start justify-start flex-col w-full xx:my-4 ss:my-3 zz:rounded-3xl ww:rounded-2xl xx:rounded-xl ss:rounded-lg ">
+            <!-- category section -->
+            <div class=" bg-red-400/ xx:py-4 ss:py-3 zz:px-5 ww:px-4 xx:px-3.5 ss:px-3 flex  flex-col w-full ">
+                <!-- category title -->
+                <div class="  flex flex-col  w-full bg-yellow-300/ ">
+                    <h3 class=" w-full text-left zz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Title</h3>
+                    <input
+                        class=" zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 xx:text-base dd:text-[14px] ss:text-[12.5px] zz:w-52 xx:w-44 bg-transparent outline-none border-[#394247] border-2 text-stone-100  px-2 py-1.5 xx:rounded-xl ss:rounded-lg focus:border-green-600 "
+                        type="text" name="" id="titleInput">
+                </div>
+                <!-- category description -->
+                <div class="  flex flex-col  w-full bg-yellow-300/ mt-4 pb-2 ">
+                    <h3 class=" w-full text-left zz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Description</h3>
+                    <textarea cols="3"
+                        class=" zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1  w-full h-16 min-h-14 max-h-16 xx:text-base dd:text-[14px] bg-transparent outline-none border-[#394247] border-2 text-stone-100  px-2 py-2 xx:rounded-xl ss:rounded-lg focus:border-green-600 "
+                        type="text" name="" id="descInput"></textarea>
+                </div>
+                <!-- Confirm or reject -->
+                <div class=" bg-blue-400/ h-auto flex items-center justify-between w-full xx:mt-4 ss:mt-3 ">
+                    <button
+                        class="zz:text-base ww:text-[15px] xx:text-[14px] dd:text-[13px] ss:text-[12.5px] w-1/2 zz:py-2.5 ww:py-2 xx:py-2 ss:py-1.5 mr-2 text-green-600 border-2 border-green-600 xx:rounded-xl ss:rounded-lg font-semibold ">Cancel</button>
+                    <button
+                        class=" zz:text-base ww:text-[15px] xx:text-[14px] dd:text-[13px] ss:text-[12.5px] w-1/2 zz:py-2.5 ww:py-2 xx:py-2 ss:py-1.5 ml-2 text-main bg-green-600 border-2 border-green-600 xx:rounded-xl ss:rounded-lg font-semibold ">Add
+                        Category</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Add Product Section -->
+    <section class=" bg-white/ h-auto mt-10 flex  justify-center flex-col py-4 zz:max-w-[600px] xx:max-w-[92%] ss:max-w-[90%] w-full ">
+        <!-- <a class=" font-medium text-stone-400 text-[18px] text-left ml-1 cursor-pointer " >?Add New Product</a> -->
+        <a class=" font-medium text-stone-200 zz:text-[21px] ww:text-[19px] xx:text-[17px] dd:text-[15px] ss:text-[14px] ml-3 ">Add New Product</a>
+        <div class="bg-[#1a262d] h-auto flex items-start justify-start flex-col w-full my-4 ss:my-3 zz:rounded-3xl ww:rounded-2xl xx:rounded-xl ss:rounded-lg ">
+            <!-- Product section -->
+            <div class=" bg-red-400/ xx:py-4 ss:py-3  zz:px-5 ww:px-4 xx:px-3.5 dd:px-3 ss:px-3 flex  flex-col w-full ">
+                <!-- Product title and quantity -->
+                <div class=" flex items-center justify-between w-full ss:flex-col dd:flex-row ">
+                    <!-- title -->
+                    <div class="  flex flex-col  dd:w-2/5 ss:w-full bg-yellow-300/ dd:mr-2  ">
+                        <h3 class=" w-full text-leftzz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Title</h3>
+                        <input
+                            class=" zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 w-full  bg-transparent outline-none border-[#394247] border-2 text-stone-100  px-2 xx:py-2 dd:py-1 ss:py-1 xx:rounded-xl ss:rounded-lg focus:border-green-600 "
+                            type="text" name="" id="titleInput">
+                    </div>
+                    <!-- quantity -->
+                    <div class="  flex flex-col  dd:w-3/5 ss:w-full bg-yellow-300/ dd:ml-2 ss:mt-2 dd:mt-0 ">
+                        <h3 class=" w-full text-leftzz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Quantity</h3>
+                        <div class="flex items-center justify-between  zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 w-full  border-[#394247] border-2 text-stone-100  px-2.5 xx:h-11 dd:h-9 ss:h-9 xx:rounded-xl ss:rounded-lg "
+                            type="text">
+                            <button class=" flex items-center justify-center p-1 rounded-full bg-[#273842]  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="#fff" class="xx:size-4 ss:size-3 ">
+                                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
+                                </svg>
+                            </button>
+                            <p class=" ww:text-base xx:text-[14px] dd:text-[13px] ss:text-[12px] font-medium text-stone-100 ">4</p>
+                            <button class=" flex items-center justify-center p-1 rounded-full bg-[#273842]  ">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                                    stroke-width="1.5" stroke="#fff" class="xx:size-4 ss:size-3">
+                                    <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
+                                        d="M12 4.5v15m7.5-7.5h-15" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- product Category Select -->
+                <div class=" dd:mt-4 ss:mt-2 flex items-center justify-between w-full ss:flex-col dd:flex-row ">
+                    <!-- location -->
+                    <div class="  flex flex-col  dd:w-[52%] ss:w-full bg-yellow-300/ dd:mr-2  ">
+                        <h3 class=" w-full text-leftzz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Location</h3>
+                        <select id="locationes"
+                            class=" form-select pr-8 pl-3 bg-no-repeat appearance-none w-full ww:text-base xx:text-[14px] ss:text-[13px] zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 border-[#394247] border-2  text-stone-100 text-[15px] outline-none focus:ring-0 font-normal xx:rounded-xl ss:rounded-lg focus:ring-green-600 focus:border-green-600 block xx:p-2.5 ss:p-1.5 bg-[#1A262D] ">
+                            <option selected value="US">Warehouse BDG</option>
+                            <option value="CA">Warehouse JKT</option>
+                            <option value="FR">Warehouse MLG</option>
+                        </select>
+                    </div>
+                    <!-- quantity -->
+                    <div class="  flex flex-col  dd:w-[50%] ss:w-full bg-yellow-300/ dd:ml-2 ss:mt-2 dd:mt-0 ">
+                        <h3 class=" w-full text-leftzz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Category</h3>
+                        <select id="categories"
+                            class=" form-select pr-8 pl-3 bg-no-repeat appearance-none w-full ww:text-base xx:text-[14px] ss:text-[13px] zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 border-[#394247] border-2  text-stone-100 text-[15px] outline-none focus:ring-0 font-normal xx:rounded-xl ss:rounded-lg focus:ring-green-600 focus:border-green-600 block xx:p-2.5 ss:p-1.5 bg-[#1A262D] ">
+                            <option selected value="US">United States</option>
+                            <option value="CA">Canada</option>
+                            <option value="FR">France</option>
+                            <option value="DE">Germany</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- Add -->
+                <div class=" bg-blue-400/ h-auto flex items-center justify-between w-full mt-6 ">
+                    <button
+                        class="zz:text-base ww:text-[15px] xx:text-[14px] dd:text-[13px] ss:text-[12.5px] zz:py-2.5 ww:py-2 xx:py-2 ss:py-1.5 w-full py-2.5  text-main bg-green-600 border-2 border-green-600 xx:rounded-xl ss:rounded-lg font-semibold ">Add
+                        Product</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- products list -->
+    <section class=" mt-10 mb-32 flex items-start justify-center flex-col w-full mx-auto zz:max-w-[600px] ww:max-w-[92%] xx:max-w-[94%] ss:w-[90%] ">
+        <h2 class=" text-left text-white zz:text-2xl ww:text-xl font-medium ml-1 ">Products List</h2>
+        <div class=" flex items-center justify-between w-full bg-yellow-400/ mt-5 ">
+            <!-- search products -->
+            <input
+                class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] zz:w-52 ww:w-40 dd:w-32 xx:w-28 ss:w-24 bg-transparent outline-none border-[#394247] border-2 text-stone-100  xx:px-3 xx:py-2 dd:px-2 dd:py-1.5 ss:p-1.5 xx:rounded-xl ss:rounded-lg focus:border-green-600 "
+                type="text" name="" placeholder="Search..." id="titleInput">
+            <!-- sort products -->
+            <select id="sort"
+                class=" form-select pr-8 pl-3 bg-no-repeat appearance-none zz:w-32 ww:w-28 xx:w-24 dd:w-24 ss:w-20 border-[#394247] border-2  text-stone-100 xx:text-[15px] dd:text-[13px] ss:text-[12px] outline-none focus:ring-0 font-normal xx:rounded-xl ss:rounded-lg focus:ring-green-600 focus:border-green-600 block xx:p-2.5 dd:p-2 ss:p-1.5 bg-[#1A262D] ">
+                <option selected value="US">Newst</option>
+                <option value="CA">Oldest</option>
+            </select>
+        </div>
+        <!-- pr list -->
+        <div class=" flex items-center justify-center ww:w-full ss:w-full ww:mr-3 dd:mt-8 ss:mt-6 overflow-x-auto bg-black/ ">
+            <ul class=" flex flex-col justify-center items-stretch ww:w-full xx:w-[500px] ss:w-[400px] py-2 zz:overflow-hidden ss:overflow-x-auto bg-yellow-500/ ">
+                <li class=" flex items-center justify-between  w-full py-2 bg-blue-400/ text-white font-medium ss:min-w-[500px] ss:overflow-x-auto ">
+                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Title</p>
+                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Location</p>
+                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Clothes</p>
+                    <p class=" font-vazir ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">۱۴۰۳/۷/۱۲</p>
+                    <p class=" border-2 border-slate-400 p-1 rounded-2xl ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">5</p>
+                    <svg class=" stroke-red-500 dd:h-6 dd:w-6 ss:h-5 ss:w-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                    </svg>
+                </li>
+                <li class="flex items-center justify-between  w-full py-2 bg-blue-400/ text-white font-medium ss:min-w-[500px] ss:overflow-x-auto">
+                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Title</p>
+                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Location</p>
+                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Clothes</p>
+                    <p class=" font-vazir ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">۱۴۰۳/۷/۱۲</p>
+                    <p class=" border-2 border-slate-400 p-1 rounded-2xl ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">5</p>
+                    <svg class=" stroke-red-500 dd:h-6 dd:w-6 ss:h-5 ss:w-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                    </svg>
+                </li>
+                <li class="flex items-center justify-between  w-full py-2 bg-blue-400/ text-white font-medium ss:min-w-[500px] ss:overflow-x-auto ">
+                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Title</p>
+                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Location</p>
+                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Clothes</p>
+                    <p class=" font-vazir ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">۱۴۰۳/۷/۱۲</p>
+                    <p class=" border-2 border-slate-400 p-1 rounded-2xl ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">5</p>
+                    <svg class=" stroke-red-500 dd:h-6 dd:w-6 ss:h-5 ss:w-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
+                        viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                    </svg>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <!-- <script src="//unpkg.com/alpinejs" defer></script> -->
+    <script src="/src/js/app.js" type="module"></script>
     </div>
 </body>
 
