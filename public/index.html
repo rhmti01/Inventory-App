@@ -11,8 +11,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100..900&display=swap" rel="stylesheet">
     <title> Inventory App | Abolfazl Rahmati </title>
     <link rel="stylesheet" href="/public/build/style.css">
@@ -27,7 +26,7 @@
     <!-- Add Category Section -->
     <section class=" bg-white/ h-auto mt-16 flex  justify-center flex-col zz:py-4 ww:py-3 zz:max-w-[600px] xx:max-w-[92%] ss:max-w-[90%] w-full ">
         <!-- <a class=" font-medium text-stone-400 text-[18px] text-left ml-1 cursor-pointer " >?Add New Product</a> -->
-        <a class=" font-medium text-stone-200 zz:text-[21px] ww:text-[19px] xx:text-[17px] dd:text-[15px] ss:text-[14px] text-left ml-3 cursor-pointer ">Add New Category</a>
+        <a class=" font-medium text-stone-200 zz:text-[21px] ww:text-[19px] xx:text-[17px] dd:text-[15px] ss:text-[14px] text-left ml-3  ">Add New Category</a>
         <div class="bg-[#1a262d] h-auto flex items-start justify-start flex-col w-full xx:my-4 ss:my-3 zz:rounded-3xl ww:rounded-2xl xx:rounded-xl ss:rounded-lg ">
             <!-- category section -->
             <div class=" bg-red-400/ xx:py-4 ss:py-3 zz:px-5 ww:px-4 xx:px-3.5 ss:px-3 flex  flex-col w-full ">
@@ -83,7 +82,7 @@
                                     <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
                                 </svg>
                             </button>
-                            <p class=" ww:text-base xx:text-[14px] dd:text-[13px] ss:text-[12px] font-medium text-stone-100 ">4</p>
+                            <p class="  ww:text-base xx:text-[14px] dd:text-[13px] ss:text-[12px] font-medium text-stone-100 ">4</p>
                             <button class=" flex items-center justify-center p-1 rounded-full bg-[#273842]  ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="#fff" class="xx:size-4 ss:size-3">
@@ -101,20 +100,18 @@
                         <h3 class=" w-full text-leftzz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Location</h3>
                         <select id="locationes"
                             class=" form-select pr-8 pl-3 bg-no-repeat appearance-none w-full ww:text-base xx:text-[14px] ss:text-[13px] zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 border-[#394247] border-2  text-stone-100 text-[15px] outline-none focus:ring-0 font-normal xx:rounded-xl ss:rounded-lg focus:ring-green-600 focus:border-green-600 block xx:p-2.5 ss:p-1.5 bg-[#1A262D] ">
-                            <option selected value="US">Warehouse BDG</option>
-                            <option value="CA">Warehouse JKT</option>
-                            <option value="FR">Warehouse MLG</option>
+                            <option selected value="BDG">BDG</option>
+                            <option value="JKT">JKT</option>
+                            <option value="MLG">MLG</option>
                         </select>
                     </div>
                     <!-- quantity -->
                     <div class="  flex flex-col  dd:w-[50%] ss:w-full bg-yellow-300/ dd:ml-2 ss:mt-2 dd:mt-0 ">
                         <h3 class=" w-full text-leftzz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Category</h3>
-                        <select id="categories"
+                        <select id="categoriesSelect"
                             class=" form-select pr-8 pl-3 bg-no-repeat appearance-none w-full ww:text-base xx:text-[14px] ss:text-[13px] zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 border-[#394247] border-2  text-stone-100 text-[15px] outline-none focus:ring-0 font-normal xx:rounded-xl ss:rounded-lg focus:ring-green-600 focus:border-green-600 block xx:p-2.5 ss:p-1.5 bg-[#1A262D] ">
-                            <option selected value="US">United States</option>
-                            <option value="CA">Canada</option>
-                            <option value="FR">France</option>
-                            <option value="DE">Germany</option>
+                            <option selected value="none">select category</option>
+                            <!-- <option  value=""></option> -->
                         </select>
                     </div>
                 </div>
@@ -146,11 +143,11 @@
         <div class=" flex items-center justify-center ww:w-full ss:w-full ww:mr-3 dd:mt-8 ss:mt-6 overflow-x-auto bg-black/ ">
             <ul class=" flex flex-col justify-center items-stretch ww:w-full xx:w-[500px] ss:w-[400px] py-2 zz:overflow-hidden ss:overflow-x-auto bg-yellow-500/ ">
                 <li class=" flex items-center justify-between  w-full py-2 bg-blue-400/ text-white font-medium ss:min-w-[500px] ss:overflow-x-auto ">
-                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Title</p>
-                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Location</p>
-                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Clothes</p>
-                    <p class=" font-vazir ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">۱۴۰۳/۷/۱۲</p>
-                    <p class=" border-2 border-slate-400 p-1 rounded-2xl ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">5</p>
+                    <p class=" basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">gondara</p>
+                    <p class=" basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] "> BDG</p>
+                    <p class=" basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">shoe</p>
+                    <p class=" basis-[16%] font-vazir ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">۱۴۰۳/۷/۱۲</p>
+                    <p class="  border-2 border-slate-400 p-1 rounded-2xl ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">5</p>
                     <svg class=" stroke-red-500 dd:h-6 dd:w-6 ss:h-5 ss:w-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -158,11 +155,11 @@
                     </svg>
                 </li>
                 <li class="flex items-center justify-between  w-full py-2 bg-blue-400/ text-white font-medium ss:min-w-[500px] ss:overflow-x-auto">
-                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Title</p>
-                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Location</p>
-                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Clothes</p>
-                    <p class=" font-vazir ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">۱۴۰۳/۷/۱۲</p>
-                    <p class=" border-2 border-slate-400 p-1 rounded-2xl ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">5</p>
+                    <p class=" basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">godnara</p>
+                    <p class=" basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">MLG</p>
+                    <p class=" basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Clothes</p>
+                    <p class=" basis-[16%] font-vazir ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">۱۴۰۳/۷/۱۲</p>
+                    <p class="  border-2 border-slate-400 p-1 rounded-2xl ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">5</p>
                     <svg class=" stroke-red-500 dd:h-6 dd:w-6 ss:h-5 ss:w-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
@@ -170,11 +167,11 @@
                     </svg>
                 </li>
                 <li class="flex items-center justify-between  w-full py-2 bg-blue-400/ text-white font-medium ss:min-w-[500px] ss:overflow-x-auto ">
-                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Title</p>
-                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Location</p>
-                    <p class=" ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Clothes</p>
-                    <p class=" font-vazir ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">۱۴۰۳/۷/۱۲</p>
-                    <p class=" border-2 border-slate-400 p-1 rounded-2xl ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">5</p>
+                    <p class="  basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">baby boss</p>
+                    <p class="  basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">MLG</p>
+                    <p class="  basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">Clothes</p>
+                    <p class="  basis-[16%] font-vazir ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">۱۴۰۳/۷/۱۲</p>
+                    <p class="  border-2 border-slate-400 p-1 rounded-2xl ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">5</p>
                     <svg class=" stroke-red-500 dd:h-6 dd:w-6 ss:h-5 ss:w-5 cursor-pointer" xmlns="http://www.w3.org/2000/svg" fill="none"
                         viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
                         <path stroke-linecap="round" stroke-linejoin="round"
