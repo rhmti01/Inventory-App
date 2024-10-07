@@ -69,21 +69,21 @@
                         <h3 class=" w-full text-leftzz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Title</h3>
                         <input
                             class=" zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 w-full  bg-transparent outline-none border-[#394247] border-2 text-stone-100  px-2 xx:py-2 dd:py-1 ss:py-1 xx:rounded-xl ss:rounded-lg focus:border-green-600 "
-                            type="text" name="" id="titleInput">
+                            type="text" name="" id="productTitle">
                     </div>
                     <!-- quantity -->
                     <div class="  flex flex-col  dd:w-3/5 ss:w-full bg-yellow-300/ dd:ml-2 ss:mt-2 dd:mt-0 ">
                         <h3 class=" w-full text-leftzz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Quantity</h3>
-                        <div class="flex items-center justify-between  zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 w-full  border-[#394247] border-2 text-stone-100  px-2.5 xx:h-11 dd:h-9 ss:h-9 xx:rounded-xl ss:rounded-lg "
+                        <div  id="quantityCenter" class="flex items-center justify-between  zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 w-full  border-[#394247] border-2 text-stone-100  px-2.5 xx:h-11 dd:h-9 ss:h-9 xx:rounded-xl ss:rounded-lg "
                             type="text">
-                            <button class=" flex items-center justify-center p-1 rounded-full bg-[#273842]  ">
+                            <button id="decQty" class="  toggleBtn flex items-center justify-center p-1 rounded-full bg-[#273842]  ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="#fff" class="xx:size-4 ss:size-3 ">
                                     <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" d="M5 12h14" />
                                 </svg>
                             </button>
-                            <p class="  ww:text-base xx:text-[14px] dd:text-[13px] ss:text-[12px] font-medium text-stone-100 ">4</p>
-                            <button class=" flex items-center justify-center p-1 rounded-full bg-[#273842]  ">
+                            <p  id="productQuantity" class="  ww:text-base xx:text-[14px] dd:text-[13px] ss:text-[12px] font-medium text-stone-100 ">0</p>
+                            <button id="incQty" class="toggleBtn  flex items-center justify-center p-1 rounded-full bg-[#273842]  ">
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                                     stroke-width="1.5" stroke="#fff" class="xx:size-4 ss:size-3">
                                     <path stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
@@ -98,9 +98,10 @@
                     <!-- location -->
                     <div class="  flex flex-col  dd:w-[52%] ss:w-full bg-yellow-300/ dd:mr-2  ">
                         <h3 class=" w-full text-leftzz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Location</h3>
-                        <select id="locationes"
+                        <select id="productLocations"
                             class=" form-select pr-8 pl-3 bg-no-repeat appearance-none w-full ww:text-base xx:text-[14px] ss:text-[13px] zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 border-[#394247] border-2  text-stone-100 text-[15px] outline-none focus:ring-0 font-normal xx:rounded-xl ss:rounded-lg focus:ring-green-600 focus:border-green-600 block xx:p-2.5 ss:p-1.5 bg-[#1A262D] ">
-                            <option selected value="BDG">BDG</option>
+                            <option selected value="none">- select location - </option>
+                            <option value="BDG">BDG</option>
                             <option value="JKT">JKT</option>
                             <option value="MLG">MLG</option>
                         </select>
@@ -110,14 +111,14 @@
                         <h3 class=" w-full text-leftzz:text-[17px] ww:text-[16px] xx:text-[15px] dd:text-[13px] ss:text-[12.5px] text-white mt-1 font-medium "> Category</h3>
                         <select id="categoriesSelect"
                             class=" form-select pr-8 pl-3 bg-no-repeat appearance-none w-full ww:text-base xx:text-[14px] ss:text-[13px] zz:mt-3 ww:mt-2 xx:mt-1.5 ss:mt-1 border-[#394247] border-2  text-stone-100 text-[15px] outline-none focus:ring-0 font-normal xx:rounded-xl ss:rounded-lg focus:ring-green-600 focus:border-green-600 block xx:p-2.5 ss:p-1.5 bg-[#1A262D] ">
-                            <option selected value="none">select category</option>
+                            <option selected value="none">- select category -</option>
                             <!-- <option  value=""></option> -->
                         </select>
                     </div>
                 </div>
                 <!-- Add -->
                 <div class=" bg-blue-400/ h-auto flex items-center justify-between w-full mt-6 ">
-                    <button
+                    <button id="addNewProductBtn"
                         class="zz:text-base ww:text-[15px] xx:text-[14px] dd:text-[13px] ss:text-[12.5px] zz:py-2.5 ww:py-2 xx:py-2 ss:py-1.5 w-full py-2.5  text-main bg-green-600 border-2 border-green-600 xx:rounded-xl ss:rounded-lg font-semibold ">Add
                         Product</button>
                 </div>
@@ -141,8 +142,8 @@
         </div>
         <!-- pr list -->
         <div class=" flex items-center justify-center ww:w-full ss:w-full ww:mr-3 dd:mt-8 ss:mt-6 overflow-x-auto bg-black/ ">
-            <ul class=" flex flex-col justify-center items-stretch ww:w-full xx:w-[500px] ss:w-[400px] py-2 zz:overflow-hidden ss:overflow-x-auto bg-yellow-500/ ">
-                <li class=" flex items-center justify-between  w-full py-2 bg-blue-400/ text-white font-medium ss:min-w-[500px] ss:overflow-x-auto ">
+            <ul  id="productsCenter" class=" flex flex-col justify-center items-stretch ww:w-full xx:w-[500px] ss:w-[400px] py-2 zz:overflow-hidden ss:overflow-x-auto bg-yellow-500/ ">
+                <li  class=" flex items-center justify-between  w-full py-2 bg-blue-400/ text-white font-medium ss:min-w-[500px] ss:overflow-x-auto ">
                     <p class=" basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">gondara</p>
                     <p class=" basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] "> BDG</p>
                     <p class=" basis-[16%] ww:text-base xx:text-[15px] dd:text-[14px] ss:text-[13px] ">shoe</p>

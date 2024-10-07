@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
     const productView = new ProductView()
     const categoryView = new CategoryView()
     categoryView.setupApp()
+    productView.setupApp()
 })
 
 
