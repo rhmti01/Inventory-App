@@ -13,6 +13,7 @@ export default class ProductView {
         this.productCenter = document.querySelector("#productsCenter")
         this.toggleBtns = document.querySelectorAll(".toggleBtn")
         this.searchInput = document.querySelector("#searchInput")
+        this.sortSelect = document.querySelector("#sort")
         // event listeners
         this.pdtAddNew.addEventListener("click", () => {
             this.addNewProduct()
@@ -22,13 +23,17 @@ export default class ProductView {
                 this.toggleProductQty(e)
             })
         })
-        this.searchInput.addEventListener("keyup",(e)=>{
+        this.searchInput.addEventListener("keyup", (e) => {
             this.searchProducts(e.target.value)
+        })
+        this.sortSelect.addEventListener("change", (e) => {
+            this.sortBySelect(e.target.value)
         })
     }
 
     setupApp() {
         this.showListedProducts(Storage.getProducts)
+        this.sortBySelect(this.sortSelect.value)
     }
 
     addNewProduct() {
@@ -36,7 +41,7 @@ export default class ProductView {
             // create new object for each category
             const newProduct = {
                 id: new Date().getTime(),
-                title: this.pdtTitle.value,
+                title: this.pdtTitle.value.trim(),
                 quantity: this.pdtQty.innerText,
                 location: this.pdtLocation.value,
                 category: this.ctgSelect.value,
@@ -53,6 +58,7 @@ export default class ProductView {
             pdtList.push(newProduct)
             Storage.saveProducts(pdtList)
             // instant update html product list from storage
+            this.sortBySelect(this.sortSelect.value)
             this.showListedProducts(pdtList)
 
         } else {
@@ -78,7 +84,7 @@ export default class ProductView {
                     </svg>
                 </li>
             `
-        });
+        })
         this.productCenter.innerHTML = output;
         this.productsAction()
     }
@@ -109,6 +115,7 @@ export default class ProductView {
         const productId = Number(e.currentTarget.id)
         Storage.removeProduct(productId)
         this.showListedProducts(Storage.getProducts)
+        this.sortBySelect(this.sortSelect.value)
     }
 
     searchProducts(searchTerm) {
@@ -117,7 +124,25 @@ export default class ProductView {
         const filteredProducts = addedProducts.filter((product) =>
             product.title.toLowerCase().trim().includes(normalizedSearchTerm)
         );
+        this.sortBySelect(this.sortSelect.value)
         this.showListedProducts(filteredProducts);
+    }
+
+    sortBySelect(sortType) {
+        let saveProducts = Storage.getProducts
+        let sortedProducts = [];
+        if (sortType === "newest") {
+            sortedProducts = saveProducts.slice().sort((a, b) => b.id - a.id);
+        } else if (sortType === "oldest") {
+            sortedProducts = saveProducts.slice().sort((a, b) => a.id - b.id);
+        } else if (sortType ==="A-Z" ){
+            sortedProducts = saveProducts.slice().sort((a,b)=> a.title.toLowerCase().localeCompare(b.title.toLowerCase()))
+        } else if (sortType ==="Z-A" ){
+            sortedProducts = saveProducts.slice().sort((a,b)=> a.title.toLowerCase().localeCompare(b.title.toLowerCase())).reverse()
+        } else {
+            sortedProducts = saveProducts.slice();
+        }
+        this.showListedProducts(sortedProducts);
     }
 
 }
