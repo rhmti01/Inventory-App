@@ -1,5 +1,6 @@
 {
   "devDependencies": {
+    "@babel/preset-env": "^7.25.8",
     "tailwindcss": "^3.4.13"
   },
   "name": "inventory-app",
@@ -7,6 +8,7 @@
   "description": "",
   "main": "tailwind.config.js",
   "dependencies": {
+    "@babel/cli": "^7.25.7",
     "ansi-regex": "^6.1.0",
     "ansi-styles": "^6.2.1",
     "any-promise": "^1.3.0",
@@ -100,7 +102,11 @@
   "scripts": {
     "start": " node  ./src/js/server.js ",
     "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --watch ",
-    "minify": " npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --minify  "
+    "minify": " npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --minify  ",
+    "app-babel": "babel src/js/app.js -o public/build/bundle-app.js --presets @babel/preset-env",
+    "categoryView-babel": "babel src/js/categoryView.js -o public/build/bundle-categoryView.js --presets @babel/preset-env",
+    "productView-babel": "babel src/js/productView.js -o public/build/bundle-productView.js --presets @babel/preset-env",
+    "storage-babel": "babel src/js/storage.js -o public/build/bundle-storage.js --presets @babel/preset-env"
   },
   "author": "",
   "license": "MIT"
