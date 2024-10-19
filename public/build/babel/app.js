@@ -9,6 +9,7 @@ document.addEventListener("DOMContentLoaded", function () {
   categoryView.setupApp();
   productView.setupApp();
 });
+console.log("babel");
 
 // // Full Name Validation Function 
 // function fulllNameee(e) {
