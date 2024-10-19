@@ -1,7 +1,9 @@
 {
   "devDependencies": {
     "@babel/preset-env": "^7.25.8",
-    "tailwindcss": "^3.4.13"
+    "tailwindcss": "^3.4.13",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
   },
   "name": "inventory-app",
   "version": "1.0.0",
@@ -102,11 +104,12 @@
   "scripts": {
     "start": " node  ./src/js/server.js ",
     "dev": "npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --watch ",
-    "minify": " npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --minify  ",
-    "app-babel": "babel src/js/app.js -o public/build/babel/app.js --presets @babel/preset-env",
-    "categoryView-babel": "babel src/js/categoryView.js -o public/build/babel/categoryView.js --presets @babel/preset-env",
-    "productView-babel": "babel src/js/productView.js -o public/build/babel/productView.js --presets @babel/preset-env",
-    "storage-babel": "babel src/js/storage.js -o public/build/babel/storage.js --presets @babel/preset-env"
+    "tailwind-minify": " npx tailwindcss -i ./src/css/tailwind.css -o ./public/build/style.css --minify  ",
+    "app-babel": "babel src/js/app.js -o public/build/babel/app.js --presets @babel/preset-env --watch ",
+    "categoryView-babel": "babel src/js/categoryView.js -o public/build/babel/categoryView.js --presets @babel/preset-env  --watch ",
+    "productView-babel": "babel src/js/productView.js -o public/build/babel/productView.js --presets @babel/preset-env  --watch ",
+    "storage-babel": "babel src/js/storage.js -o public/build/babel/storage.js --presets @babel/preset-env --watch " ,
+    "build" : "webpack"
   },
   "author": "Abolfazl Rahmati",
   "license": "MIT"
