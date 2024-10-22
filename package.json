@@ -1,6 +1,8 @@
 {
   "devDependencies": {
-    "@babel/preset-env": "^7.25.8",
+    "@babel/core": "^7.25.9",
+    "@babel/preset-env": "^7.25.9",
+    "babel-loader": "^9.2.1",
     "tailwindcss": "^3.4.13",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4"
@@ -108,8 +110,8 @@
     "app-babel": "babel src/js/app.js -o public/build/babel/app.js --presets @babel/preset-env --watch ",
     "categoryView-babel": "babel src/js/categoryView.js -o public/build/babel/categoryView.js --presets @babel/preset-env  --watch ",
     "productView-babel": "babel src/js/productView.js -o public/build/babel/productView.js --presets @babel/preset-env  --watch ",
-    "storage-babel": "babel src/js/storage.js -o public/build/babel/storage.js --presets @babel/preset-env --watch " ,
-    "build" : "webpack"
+    "storage-babel": "babel src/js/storage.js -o public/build/babel/storage.js --presets @babel/preset-env --watch ",
+    "build": "webpack"
   },
   "author": "Abolfazl Rahmati",
   "license": "MIT"
